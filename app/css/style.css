@@ -597,8 +597,100 @@ del {
   margin: 100px 0
 }
 .info .info__item {
-  display: block
+  display: block;
+  color: #2b2b3e
 }
 .info .info__top {
-  max-width: 400px
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+  color: #2b2b3e;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s
+}
+.info .info__top:hover {
+  color: #5a061f
+}
+.info .info__top .info__top-pic {
+  margin-right: 20px
+}
+.info .info__top .info__top-text {
+  font-family: Book Antiqua;
+  max-width: 320px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 22px
+}
+.info .info__adress {
+  margin-bottom: 15px
+}
+.info .info__work {
+  margin-top: 15px
+}
+.events__inner {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 550px
+}
+.events__inner .events__left {
+  min-width: 50%
+}
+.events__inner .events__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.events__inner .events__item {
+  display: block;
+  position: relative;
+  max-width: 635px;
+  margin: 0 0 10px 0;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s,-webkit-transform 1s
+}
+.events__inner .events__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.1)),to(rgba(0,0,0,.6)));
+  background: -o-linear-gradient(top,rgba(0,0,0,.1) 0,rgba(0,0,0,.6) 100%);
+  background: linear-gradient(180deg,rgba(0,0,0,.1) 0,rgba(0,0,0,.6) 100%)
+}
+.events__inner .events__item:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03)
+}
+.events__inner .events__text {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  font-family: Book Antiqua;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #f9f6f3;
+  z-index: 1
+}
+.events__inner .events__item-af {
+  margin-right: 10px
+}
+.events__inner .events__item-serv {
+  margin-right: 10px
 }
