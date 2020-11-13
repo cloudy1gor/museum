@@ -587,3 +587,18 @@ del {
 .header .slick-dots li + li {
   margin-left: 5px
 }
+.info .info__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 100px 0
+}
+.info .info__item {
+  display: block
+}
+.info .info__top {
+  max-width: 400px
+}

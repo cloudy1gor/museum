@@ -179,4 +179,29 @@
   }
 }
 
+.info {
+  .info__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+  }
+
+  .info__item {
+    display: block;
+  }
+
+  .info__top {
+    max-width: 400px;
+  }
+
+  .info__top-pic {
+  }
+  .info__top-text {
+  }
+  .info__adress {
+  }
+  .info__work {
+  }
+}
+
 @import "media";
