@@ -1,0 +1,182 @@
+@import "global";
+@import "fonts";
+@import "vars";
+
+.wrapper {
+  font-family: Ubuntu;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1300px;
+}
+
+.header {
+  color: #f9f6f3;
+
+  .header__top {
+    @include pseudo;
+    z-index: 1;
+    width: 100%;
+  }
+  .look {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+
+  .look__item + .look__item {
+    margin-left: 50px;
+  }
+
+  .look__link {
+    color: #cfa968;
+  }
+
+  .look__btn {
+    position: relative;
+    border: 2px solid #cfa968;
+    padding: 5px 30px 5px 15px;
+    font-family: Book Antiqua;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    &::after {
+      @include pseudo($content: url(../images/src/vector-btn.svg));
+      top: 0;
+      right: 16px;
+    }
+  }
+
+  .menu {
+    background: #2b2b3e;
+    opacity: 0.8;
+  }
+
+  .menu__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu__text {
+    padding: 10px;
+    width: 140px;
+  }
+
+  .menu__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .menu__item-link {
+    color: #f9f6f3;
+  }
+
+  .menu__item + .menu__item {
+    margin-left: 38px;
+  }
+
+  .slider__item {
+    @include bg;
+    height: 650px;
+  }
+
+  .slider__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider__container {
+    width: 100%;
+  }
+
+  .slider__title {
+    max-width: 550px;
+    font-family: Book Antiqua;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .slider__sub-title {
+    margin-bottom: 32px;
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .slider__more {
+    position: relative;
+    align-self: flex-start;
+    border: 2px solid #cfa968;
+    padding: 10px 80px 10px 30px;
+    font-family: Book Antiqua;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #f9f6f3;
+    &::after {
+      @include pseudo($content: url(../images/src/vector-ar.svg));
+      right: 30px;
+      top: 10px;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    top: 552px;
+    transform: translateX(-640px);
+  }
+
+  .slick-next {
+    bottom: 88px;
+    transform: translateX(-570px);
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    & button {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      font-size: 0;
+      background-color: white;
+    }
+    & .slick-active button {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 7px;
+      height: 7px;
+      font-size: 0;
+      background-color: transparent;
+    }
+  }
+
+  .slick-dots li + li {
+    margin-left: 5px;
+  }
+}
+
+@import "media";
