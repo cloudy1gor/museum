@@ -44,4 +44,8 @@ $(function () {
     nextArrow:
       '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
   });
+
+  $(".menu__btn, .menu a").on("click", function () {
+    $(".menu__list").toggleClass("menu__list--active");
+  });
 });

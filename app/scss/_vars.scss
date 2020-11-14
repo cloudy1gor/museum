@@ -41,17 +41,17 @@
 }
 
 $breakpoints: (
-  "phone": 400px,
-  "phone-wide": 480px,
-  "phablet": 560px,
-  "tablet-small": 640px,
-  "tablet": 768px,
-  "tablet-wide": 1024px,
-  "desktop": 1248px,
-  "desktop-wide": 1440px,
+  "400": 400px,
+  "480": 480px,
+  "560": 560px,
+  "640": 640px,
+  "768": 768px,
+  "1024": 1024px,
+  "1248": 1248px,
+  "1440": 1440px,
 );
 
-@mixin mq($width, $type: min) {
+@mixin mq($width, $type: max) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
     @if $type == max {
