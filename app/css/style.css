@@ -1185,3 +1185,61 @@ del {
 .partners .partner__logo {
   margin-right: 10px;
 }
+
+.footer {
+  padding: 40px 0 50px 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.footer,
+.footer__link,
+.footer__phone,
+.footer__email,
+.footer__bottom {
+  background: #2b2b3e;
+  color: #f9f6f3;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__container .footer__item {
+  max-width: 300px;
+  margin-bottom: 35px;
+}
+
+.footer__container .footer__link,
+.footer__container .footer__text-row,
+.footer__container .footer__address,
+.footer__container .footer__email {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+.footer__bottom-text {
+  margin: 0 25px 0 15px;
+}
