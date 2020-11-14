@@ -32,14 +32,6 @@
   background-position: $bg-position;
 }
 
-@mixin flex($f-d: row, $f-w: nowrap, $j-c: center, $a-i: center) {
-  display: flex;
-  flex-wrap: $f-w;
-  flex-direction: $f-d;
-  justify-content: $j-c;
-  align-items: $a-i;
-}
-
 $breakpoints: (
   "400": 400px,
   "480": 480px,

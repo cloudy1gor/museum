@@ -18,6 +18,15 @@ $(function () {
       '<button type="button" class="slick-prev"><img src="../images/src/slide-prev.svg" alt="#"></button>',
     nextArrow:
       '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          prevArrow:false,
+          nextArrow:false,
+        },
+      },
+    ],
   });
 
   $(".gallery__slider").slick({

@@ -97,7 +97,9 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  .wrapper {
+    overflow-x: hidden;
+  }
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
