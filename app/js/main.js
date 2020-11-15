@@ -22,8 +22,8 @@ $(function () {
       {
         breakpoint: 1300,
         settings: {
-          prevArrow:false,
-          nextArrow:false,
+          prevArrow: false,
+          nextArrow: false,
         },
       },
     ],
@@ -57,4 +57,18 @@ $(function () {
   $(".menu__btn, .menu a").on("click", function () {
     $(".menu__list").toggleClass("menu__list--active");
   });
+});
+
+var header = $(".header__top"),
+  scrollPrev = 0;
+
+$(window).scroll(function () {
+  var scrolled = $(window).scrollTop();
+
+  if (scrolled > 100 && scrolled > scrollPrev) {
+    header.addClass("out");
+  } else {
+    header.removeClass("out");
+  }
+  scrollPrev = scrolled;
 });

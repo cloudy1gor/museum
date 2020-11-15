@@ -19,8 +19,14 @@
 
   .header__top {
     @include pseudo;
-    z-index: 1;
+    position: fixed;
+    z-index: 5;
     width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .header__top.out {
+    transform: translateY(-100%);
   }
 
   .look {
@@ -31,7 +37,7 @@
       position: absolute;
       right: 10%;
       margin: 23px auto;
-      z-index: 1;
+      z-index: 3;
     }
     @include mq("560") {
       display: none;
@@ -87,6 +93,10 @@
     }
   }
 
+  .menu__link {
+    z-index: 3;
+  }
+
   .menu__text {
     padding: 10px;
     width: 140px;
@@ -122,6 +132,13 @@
     margin: 0 -10px;
   }
 
+  .menu__item {
+    @include mq("768") {
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+  }
+
   .menu__item-link {
     color: #f9f6f3;
   }
@@ -130,6 +147,9 @@
     margin-left: 38px;
     @include mq("1248") {
       margin-left: 20px;
+    }
+    @include mq("768") {
+      margin-left: 0;
     }
   }
 
@@ -274,16 +294,25 @@
     display: flex;
     justify-content: space-between;
     margin: 100px 0;
+    @include mq("768") {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .info__item {
     display: block;
     color: #2b2b3e;
+    @include mq("768") {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
 
   .info__item + .info__item {
+    margin-left: 30px;
     @include mq("768") {
-      margin-left: 30px;
+      margin-left: 0;
     }
   }
 
@@ -292,6 +321,9 @@
     margin-bottom: 25px;
     color: #2b2b3e;
     transition: color 1s;
+    @include mq("768") {
+      margin-bottom: 15px;
+    }
     &:hover {
       color: #5a061f;
     }
@@ -334,14 +366,24 @@
   @include mq("1248") {
     max-height: 500px;
   }
+  @include mq("768") {
+    flex-direction: column;
+    max-height: 100%;
+  }
 
   .events__left {
     min-width: 50%;
+    @include mq("768") {
+      margin: 0 auto;
+    }
   }
 
   .events__right {
     display: flex;
     flex-wrap: wrap;
+    @include mq("768") {
+      justify-content: center;
+    }
   }
 
   .events__item {
@@ -393,6 +435,9 @@
       font-size: 21px;
       line-height: 20px;
     }
+    @include mq("480") {
+      font-size: 16px;
+    }
   }
   .events__item-af {
     margin-right: 10px;
@@ -433,6 +478,12 @@
 
   .news__item-3 {
     @include mq("1248") {
+      display: none;
+    }
+  }
+
+  .news__item-2 {
+    @include mq("480") {
       display: none;
     }
   }
@@ -635,5 +686,3 @@
     margin: 0 25px 0 15px;
   }
 }
-
-@import "media";
