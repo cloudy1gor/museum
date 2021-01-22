@@ -5,15 +5,14 @@ $(function () {
       '<button type="button" class="slick-prev"><img src="../images/src/slide-prev.svg" alt="#"></button>',
     nextArrow:
       '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          prevArrow: false,
-          nextArrow: false,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1300,
+    //     settings: {
+    //       arrows: false,
+    //     },
+    //   },
+    // ],
   });
 
   $(".gallery__slider").slick({
@@ -57,12 +56,12 @@ $(function () {
   $(".menu__btn, .menu a").on("click", function () {
     $(".menu__list").toggleClass("menu__list--active");
   });
-});
 
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 1) {
-    $(".menu").addClass("sticky");
-  } else {
-    $(".menu").removeClass("sticky");
-  }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1) {
+      $(".menu").addClass("sticky");
+    } else {
+      $(".menu").removeClass("sticky");
+    }
+  });
 });

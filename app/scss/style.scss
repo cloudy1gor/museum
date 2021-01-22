@@ -49,11 +49,16 @@
   }
 
   &__text {
+    @include txt(3);
     max-width: 320px;
     font-family: "Book Antiqua";
     font-weight: 700;
     font-size: 19px;
     line-height: 22px;
+
+    &--first {
+      color: #5a061f;
+    }
     @include mq("768") {
       font-size: 14px;
       line-height: 13px;
@@ -61,13 +66,18 @@
   }
 
   &__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 20px;
-    width: 65px;
-    height: 62px;
+    max-width: 65px;
+    max-height: 62px;
   }
 
   &__adress {
+    @include txt(1);
     margin-bottom: 15px;
+    max-width: 350px;
     @include mq("768") {
       font-size: 12px;
       line-height: 14px;
@@ -75,7 +85,9 @@
   }
 
   &__work {
+    @include txt(1);
     margin-top: 15px;
+    max-width: 350px;
     @include mq("768") {
       font-size: 12px;
       line-height: 14px;
@@ -85,30 +97,19 @@
 
 .events {
   &__inner {
-    display: flex;
+    display: grid;
+    grid-gap: 0.5vw;
+    grid-template-areas:
+      "af tic tic"
+      "af serv virt";
+    grid-template-columns: 49% 25% 25%;
+    grid-template-rows: 38% 62%;
     margin-bottom: 100px;
-    max-height: 550px;
     @include mq("1248") {
-      max-height: 500px;
+      min-width: 50vh;
     }
     @include mq("768") {
-      flex-direction: column;
-      max-height: 100%;
-    }
-  }
-
-  &__left {
-    min-width: 50%;
-    @include mq("768") {
-      margin: 0 auto;
-    }
-  }
-
-  &__right {
-    display: flex;
-    flex-wrap: wrap;
-    @include mq("768") {
-      justify-content: center;
+      min-height: 100%;
     }
   }
 
@@ -117,7 +118,7 @@
     display: block;
     margin: 0 0 10px;
     max-width: 635px;
-    transition: transform 1s;
+    transition: transform 0.6s;
 
     &::after {
       @include pseudo();
@@ -137,28 +138,37 @@
     }
 
     &--tic {
-      max-width: 98%;
+      align-self: baseline;
+      grid-area: tic;
     }
 
     &--af {
-      margin-right: 10px;
+      align-self: stretch;
+      grid-area: af;
     }
 
     &--serv {
-      margin-right: 10px;
+      align-self: baseline;
+      grid-area: serv;
     }
 
-    &--serv,
     &--virt {
-      max-width: 48%;
+      align-self: baseline;
+      grid-area: virt;
     }
+  }
+
+  &__pic {
+    object-fit: cover;
   }
 
   &__text {
     @include pseudo();
+    @include txt(2);
     left: 25px;
     bottom: 15px;
     z-index: 1;
+    max-width: 300px;
     font-family: "Book Antiqua";
     font-weight: 700;
     font-size: 36px;
@@ -178,7 +188,9 @@
   margin-bottom: 100px;
 
   &__title {
+    @include txt(2);
     margin-bottom: 40px;
+    max-width: 400px;
     font-family: "Book Antiqua";
     font-weight: 700;
     font-size: 36px;
@@ -227,6 +239,7 @@
   &__pic {
     margin-bottom: 30px;
     min-height: 214px;
+    object-fit: cover;
   }
 
   &__date {
@@ -237,7 +250,9 @@
   }
 
   &__text {
+    @include txt(5);
     flex-grow: 1;
+    min-width: 400px;
     font-size: 17px;
     line-height: 25px;
     @include mq("768") {
@@ -337,6 +352,7 @@
   &__slide-pic {
     margin-right: 10px;
     max-height: 350px;
+    object-fit: contain;
   }
 }
 
@@ -378,5 +394,13 @@
 
   &__logo {
     margin-right: 10px;
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+  }
+
+  &__desc {
+    @include txt(2);
+    max-width: 270px;
   }
 }

@@ -644,8 +644,8 @@ html {
 
 .header .menu {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   position: fixed;
   z-index: 5;
   width: 100%;
@@ -656,13 +656,21 @@ html {
   transition: all 0.3s ease;
 }
 
+.header .menu__logo {
+  width: 88px;
+  height: 55px;
+}
+
 .header .menu.sticky {
+  margin-top: -15px;
   -webkit-transform: translateY(-60px);
   -ms-transform: translateY(-60px);
   transform: translateY(-60px);
 }
 
 .header .menu__btn {
+  position: absolute;
+  right: 15px;
   z-index: 3;
   display: none;
 }
@@ -676,13 +684,22 @@ html {
   align-items: center;
 }
 
-.header .menu__link {
+.header .menu__img-link {
   z-index: 3;
 }
 
 .header .menu__text {
-  padding: 10px;
-  width: 140px;
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+  margin: 10px;
+  max-width: 160px;
 }
 
 .header .menu__list {
@@ -695,7 +712,7 @@ html {
   margin-left: auto;
 }
 
-ul .header .menu__list--active {
+.header .menu__list.menu__list--active {
   margin: 0 -10px;
   padding-top: 80px;
   -webkit-transform: translateY(0%);
@@ -703,8 +720,25 @@ ul .header .menu__list--active {
   transform: translateY(0%);
 }
 
-.header .menu__item-link {
+.header .menu__link {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+  max-width: 150px;
   color: #f9f6f3;
+  -webkit-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.header .menu__link:hover {
+  color: #cfa968;
 }
 
 .header .menu__item + .menu__item {
@@ -726,13 +760,58 @@ ul .header .menu__list--active {
 }
 
 .header .look__link {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
+  max-width: 142px;
   color: #cfa968;
+  -webkit-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.header .look__link:hover {
+  color: #fff;
+}
+
+.header .look__pic-search,
+.header .look__pic-eye {
+  width: 25px;
+  height: 18px;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+
+.header .look__pic-search:hover,
+.header .look__pic-eye:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .header .look__btn {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
   position: relative;
   border: 2px solid #cfa968;
   padding: 5px 30px 5px 15px;
+  max-width: 152px;
   font-family: "Book Antiqua";
   font-weight: 600;
   font-size: 12px;
@@ -742,16 +821,16 @@ ul .header .menu__list--active {
 
 .header .look__btn::after {
   content: url("../images/src/vector-btn.svg");
-  display: block;
   position: absolute;
+  display: block;
   right: 16px;
   top: 0;
 }
 
 .header .banner__item {
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   height: 650px;
 }
@@ -790,6 +869,15 @@ ul .header .menu__list--active {
 }
 
 .header .banner__title {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
   max-width: 550px;
   font-family: "Book Antiqua";
   font-weight: 700;
@@ -798,6 +886,15 @@ ul .header .menu__list--active {
 }
 
 .header .banner__sub-title {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
   margin-bottom: 32px;
   max-width: 550px;
   font-size: 18px;
@@ -805,11 +902,21 @@ ul .header .menu__list--active {
 }
 
 .header .banner__more {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
   position: relative;
   -ms-flex-item-align: start;
   align-self: flex-start;
   border: 2px solid #cfa968;
   padding: 10px 80px 10px 30px;
+  max-width: 210px;
   font-family: "Book Antiqua";
   font-size: 13px;
   line-height: 16px;
@@ -820,8 +927,8 @@ ul .header .menu__list--active {
 
 .header .banner__more::after {
   content: url("../images/src/vector-ar.svg");
-  display: block;
   position: absolute;
+  display: block;
   right: 30px;
   top: 10px;
 }
@@ -917,8 +1024,18 @@ ul .header .menu__list--active {
 .footer__text,
 .footer__address,
 .footer__email {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
   display: block;
   margin-bottom: 25px;
+  max-height: 2.3em;
 }
 
 .footer__bottom {
@@ -940,8 +1057,36 @@ ul .header .menu__list--active {
   height: 54px;
 }
 
+.footer__text {
+  max-height: 12em;
+}
+
 .footer__description {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
   margin: 0 25px 0 15px;
+  max-width: 200px;
+}
+
+.footer__link,
+.footer__phone,
+.footer__email {
+  -webkit-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.footer__link:hover,
+.footer__phone:hover,
+.footer__email:hover {
+  color: #cfa968;
 }
 
 .info__inner {
@@ -979,6 +1124,15 @@ ul .header .menu__list--active {
 }
 
 .info__text {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   max-width: 320px;
   font-family: "Book Antiqua";
   font-weight: 700;
@@ -986,38 +1140,60 @@ ul .header .menu__list--active {
   line-height: 22px;
 }
 
+.info__text--first {
+  color: #5a061f;
+}
+
 .info__pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-right: 20px;
-  width: 65px;
-  height: 62px;
+  max-width: 65px;
+  max-height: 62px;
 }
 
 .info__adress {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
   margin-bottom: 15px;
+  max-width: 350px;
 }
 
 .info__work {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  box-orient: vertical;
   margin-top: 15px;
+  max-width: 350px;
 }
 
 .events__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-gap: 0.5vw;
+  grid-template-areas: "af tic tic" "af serv virt";
+  grid-template-columns: 49% 25% 25%;
+  grid-template-rows: 38% 62%;
   margin-bottom: 100px;
-  max-height: 550px;
-}
-
-.events__left {
-  min-width: 50%;
-}
-
-.events__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .events__item {
@@ -1025,17 +1201,17 @@ ul .header .menu__list--active {
   display: block;
   margin: 0 0 10px;
   max-width: 635px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  -o-transition: transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 .events__item::after {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
   left: 0;
   right: 0;
   top: 0;
@@ -1052,29 +1228,47 @@ ul .header .menu__list--active {
 }
 
 .events__item--tic {
-  max-width: 98%;
+  align-self: baseline;
+  grid-area: tic;
 }
 
 .events__item--af {
-  margin-right: 10px;
+  align-self: stretch;
+  grid-area: af;
 }
 
 .events__item--serv {
-  margin-right: 10px;
+  align-self: baseline;
+  grid-area: serv;
 }
 
-.events__item--serv,
 .events__item--virt {
-  max-width: 48%;
+  align-self: baseline;
+  grid-area: virt;
+}
+
+.events__pic {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .events__text {
   content: "";
-  display: block;
   position: absolute;
+  display: block;
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
   left: 25px;
   bottom: 15px;
   z-index: 1;
+  max-width: 300px;
   font-family: "Book Antiqua";
   font-weight: 700;
   font-size: 36px;
@@ -1087,7 +1281,17 @@ ul .header .menu__list--active {
 }
 
 .news__title {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
   margin-bottom: 40px;
+  max-width: 400px;
   font-family: "Book Antiqua";
   font-weight: 700;
   font-size: 36px;
@@ -1119,6 +1323,8 @@ ul .header .menu__list--active {
 .news__pic {
   margin-bottom: 30px;
   min-height: 214px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .news__date {
@@ -1129,9 +1335,19 @@ ul .header .menu__list--active {
 }
 
 .news__text {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  box-orient: vertical;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  min-width: 400px;
   font-size: 17px;
   line-height: 25px;
 }
@@ -1233,6 +1449,8 @@ ul .header .menu__list--active {
 .gallery__slide-pic {
   margin-right: 10px;
   max-height: 350px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .partners {
@@ -1282,33 +1500,29 @@ ul .header .menu__list--active {
 
 .partners__logo {
   margin-right: 10px;
+  max-width: 70px;
+  max-height: 70px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-@media only screen and (max-width: 1247px) {
-  .header .menu__item + .menu__item {
-    margin-left: 20px;
-  }
+.partners__desc {
+  overflow: hidden;
+  display: -moz-box;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  max-width: 270px;
+}
 
-  .events__inner {
-    max-height: 500px;
-  }
-
-  .events__text {
-    font-size: 21px;
-    line-height: 20px;
-  }
-
-  .news__inner {
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-  }
-
-  .news__item-3 {
+@media only screen and (max-width: 1299px) {
+  .header .slick-prev,
+  .header .slick-next {
     display: none;
-  }
-
-  .news__item + .news__item {
-    margin-left: 20px;
   }
 }
 
@@ -1318,8 +1532,7 @@ ul .header .menu__list--active {
   }
 
   .header .menu__text {
-    margin: -128px auto 0 -80px;
-    padding: 0;
+    display: none;
   }
 }
 
@@ -1358,7 +1571,7 @@ ul .header .menu__list--active {
   .header .look {
     position: absolute;
     right: 10%;
-    z-index: 3;
+    z-index: 10;
     margin: 23px auto;
   }
 
@@ -1428,21 +1641,7 @@ ul .header .menu__list--active {
   }
 
   .events__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-height: 100%;
-  }
-
-  .events__left {
-    margin: 0 auto;
-  }
-
-  .events__right {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    min-height: 100%;
   }
 
   .news__title {

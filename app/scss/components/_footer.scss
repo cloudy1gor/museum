@@ -31,8 +31,10 @@
   &__text,
   &__address,
   &__email {
+    @include txt(2);
     display: block;
     margin-bottom: 25px;
+    max-height: 2.3em;
   }
 
   &__bottom {
@@ -48,7 +50,23 @@
     height: 54px;
   }
 
+  &__text {
+    max-height: 12em;
+  }
+
   &__description {
+    @include txt(2);
     margin: 0 25px 0 15px;
+    max-width: 200px;
+  }
+
+  &__link,
+  &__phone,
+  &__email {
+    transition: color 0.6s;
+
+    &:hover {
+      color: #cfa968;
+    }
   }
 }

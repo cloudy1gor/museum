@@ -17,11 +17,19 @@
     opacity: 0.8;
     transition: all 0.3s ease;
 
+    &__logo {
+      width: 88px;
+      height: 55px;
+    }
+
     &.sticky {
+      margin-top: -15px;
       transform: translateY(-60px);
     }
 
     &__btn {
+      position: absolute;
+      right: 15px;
       z-index: 3;
       display: none;
       @include mq("768") {
@@ -37,18 +45,15 @@
       }
     }
 
-    &__link {
+    &__img-link {
       z-index: 3;
     }
 
     &__text {
-      padding: 10px;
-      width: 140px;
+      @include txt(3);
+      margin: 10px;
+      max-width: 160px;
       @include mq("1024") {
-        margin: -128px auto 0 -80px;
-        padding: 0;
-      }
-      @include mq(768) {
         display: none;
       }
     }
@@ -57,6 +62,12 @@
       display: flex;
       align-items: center;
       margin-left: auto;
+
+      &.menu__list--active {
+        margin: 0 -10px;
+        padding-top: 80px;
+        transform: translateY(0%);
+      }
       @include mq("768") {
         position: absolute;
         left: 0;
@@ -70,12 +81,6 @@
       }
     }
 
-    ul &__list--active {
-      margin: 0 -10px;
-      padding-top: 80px;
-      transform: translateY(0%);
-    }
-
     &__item {
       @include mq("768") {
         margin-bottom: 25px;
@@ -83,8 +88,15 @@
       }
     }
 
-    &__item-link {
+    &__link {
+      @include txt(1);
+      max-width: 150px;
       color: #f9f6f3;
+      transition: color 0.6s;
+
+      &:hover {
+        color: #cfa968;
+      }
     }
 
     &__item + .menu__item {
@@ -105,7 +117,7 @@
     @include mq("768") {
       position: absolute;
       right: 10%;
-      z-index: 3;
+      z-index: 10;
       margin: 23px auto;
     }
     @include mq("560") {
@@ -120,13 +132,33 @@
     }
 
     &__link {
+      @include txt(1);
+      max-width: 142px;
       color: #cfa968;
+      transition: color 0.6s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__pic-search,
+    &__pic-eye {
+      width: 25px;
+      height: 18px;
+      transition: transform 0.6s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     &__btn {
+      @include txt(1);
       position: relative;
       border: 2px solid #cfa968;
       padding: 5px 30px 5px 15px;
+      max-width: 152px;
       font-family: "Book Antiqua";
       font-weight: 600;
       font-size: 12px;
@@ -142,12 +174,6 @@
   }
 
   .banner {
-    &__item {
-      @include mq("768") {
-        min-height: 100vh;
-      }
-    }
-
     &__item {
       @include bg();
       position: relative;
@@ -167,6 +193,9 @@
           rgba(0, 0, 0, 0) 100%
         );
       }
+      @include mq("768") {
+        min-height: 100vh;
+      }
     }
 
     &__slide {
@@ -183,6 +212,7 @@
     }
 
     &__title {
+      @include txt(1);
       max-width: 550px;
       font-family: "Book Antiqua";
       font-weight: 700;
@@ -195,6 +225,7 @@
     }
 
     &__sub-title {
+      @include txt(4);
       margin-bottom: 32px;
       max-width: 550px;
       font-size: 18px;
@@ -206,10 +237,12 @@
     }
 
     &__more {
+      @include txt(4);
       position: relative;
       align-self: flex-start;
       border: 2px solid #cfa968;
       padding: 10px 80px 10px 30px;
+      max-width: 210px;
       font-family: "Book Antiqua";
       font-size: 13px;
       line-height: 16px;
@@ -250,6 +283,9 @@
       z-index: 1;
       width: 100vh;
       cursor: pointer;
+      @include mq("1300") {
+        display: none;
+      }
     }
 
     &-dots {
