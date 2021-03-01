@@ -657,8 +657,9 @@ html {
 }
 
 .header .menu__logo {
-  width: 88px;
-  height: 55px;
+  padding: 5px 0;
+  min-width: 88px;
+  max-height: 55px;
 }
 
 .header .menu.sticky {
@@ -755,6 +756,15 @@ html {
   margin: 20px 0;
 }
 
+.header .look__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .header .look__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -815,12 +825,12 @@ html {
   font-family: "Book Antiqua";
   font-weight: 600;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
 .header .look__btn::after {
-  content: url("../images/src/vector-btn.svg");
+  content: url("../images/dest/vector-btn.svg");
   position: absolute;
   display: block;
   right: 16px;

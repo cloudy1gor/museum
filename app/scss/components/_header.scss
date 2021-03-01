@@ -18,8 +18,9 @@
     transition: all 0.3s ease;
 
     &__logo {
-      width: 88px;
-      height: 55px;
+      padding: 5px 0;
+      min-width: 88px;
+      max-height: 55px;
     }
 
     &.sticky {
@@ -124,10 +125,15 @@
       display: none;
     }
 
-    &__item:not(:last-child) {
-      margin-right: 50px;
-      @include mq("768") {
-        margin-right: 15px;
+    &__item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 50px;
+        @include mq("768") {
+          margin-right: 15px;
+        }
       }
     }
 
@@ -162,11 +168,11 @@
       font-family: "Book Antiqua";
       font-weight: 600;
       font-size: 12px;
-      line-height: 16px;
+      line-height: 18px;
       text-transform: uppercase;
 
       &::after {
-        @include pseudo($content: url("../images/src/vector-btn.svg"));
+        @include pseudo($content: url("../images/dest/vector-btn.svg"));
         right: 16px;
         top: 0;
       }

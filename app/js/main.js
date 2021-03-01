@@ -2,9 +2,9 @@ $(function () {
   $(".banner").slick({
     dots: true,
     prevArrow:
-      '<button type="button" class="slick-prev"><img src="../images/src/slide-prev.svg" alt="#"></button>',
+      '<button type="button" class="slick-prev"><img src="images/dest/slide-prev.svg" alt="#"></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
+      '<button type="button" class="slick-next"><img src="images/dest/slide-next.svg" alt="#"></button>',
     // responsive: [
     //   {
     //     breakpoint: 1300,
@@ -23,9 +23,9 @@ $(function () {
     centerMode: true,
     variableWidth: true,
     prevArrow:
-      '<button type="button" class="slick-prev"><img src="../images/src/slide-prev.svg" alt="#"></button>',
+      '<button type="button" class="slick-prev"><img src="images/dest/slide-prev.svg" alt="#"></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
+      '<button type="button" class="slick-next"><img src="images/dest/slide-next.svg" alt="#"></button>',
   });
 
   $(".partners__slider").slick({
@@ -35,9 +35,9 @@ $(function () {
     slidesToShow: 5,
     variableWidth: true,
     prevArrow:
-      '<button type="button" class="slick-prev"><img src="../images/src/slide-prev.svg" alt="#"></button>',
+      '<button type="button" class="slick-prev"><img src="images/dest/slide-prev.svg" alt="#"></button>',
     nextArrow:
-      '<button type="button" class="slick-next"><img src="../images/src/slide-next.svg" alt="#"></button>',
+      '<button type="button" class="slick-next"><img src="images/dest/slide-next.svg" alt="#"></button>',
   });
 
   $(".menu a, .footer__link").on("click", function (event) {

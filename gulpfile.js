@@ -57,7 +57,7 @@ function scripts() {
     "!app/js/main.min.js",
     "app/js/main.js",
   ])
-    .pipe(uglify()) // Сжатие JavaScript кода
+    .pipe(uglify())
     .pipe(concat("main.min.js"))
     .pipe(
       size({
